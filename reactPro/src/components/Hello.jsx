@@ -1,9 +1,9 @@
-
-
 const Hello = () => {
   return (
-    <div>hello from a component</div>
-  )
-}
+    <>
+      <h1>hello from compone</h1>
+    </>
+  );
+};
 
-export default Hello
+export default Hello;
