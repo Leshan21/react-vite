@@ -1,7 +1,12 @@
 const Hello = () => {
+  const name = "leshan";
+
+  const displayMessage = () => {
+    return "wow!";
+  };
   return (
     <>
-      <h1>hello from compone</h1>
+      <h1>hello from componet {displayMessage()}</h1>
     </>
   );
 };
