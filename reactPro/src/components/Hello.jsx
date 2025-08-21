@@ -1,7 +1,9 @@
-const Hello = (props) => {
+const Hello = ({ name, message, emoji }) => {
   return (
     <>
-      <h1>{props.message} {props.name}</h1>
+      <h1>
+        {message} {name} {emoji}
+      </h1>
     </>
   );
 };
