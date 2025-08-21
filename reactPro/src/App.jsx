@@ -3,7 +3,8 @@ function App() {
   
   return (
     <>
-      <Hello/>
+      <Hello name="Rob" message="hi there"/>
+      <Hello name="Tom" message="hi"/>
     </>
 
   )

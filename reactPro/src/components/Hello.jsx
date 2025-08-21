@@ -1,12 +1,7 @@
-const Hello = () => {
-  const name = "leshan";
-
-  const displayMessage = () => {
-    return "wow!";
-  };
+const Hello = (props) => {
   return (
     <>
-      <h1>hello from componet {displayMessage()}</h1>
+      <h1>{props.message} {props.name}</h1>
     </>
   );
 };
