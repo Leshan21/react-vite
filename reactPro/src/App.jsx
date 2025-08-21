@@ -1,9 +1,15 @@
 import Hello from "./components/Hello";
 function App() {
+  const person = {
+    name: "Rob",
+    message: "hi there",
+    emoji: "😂",
+    seatNumbers: [1, 4, 7],
+  };
+
   return (
     <>
-      <Hello name="Rob" message="hi there" emoji="😂"/>
-      <Hello name="Tom" message="hi" />
+      <Hello person={person} />
     </>
   );
 }
