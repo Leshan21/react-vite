@@ -1,3 +1,5 @@
+import Fruit from "./Fruit.jsx";
+
 const Fruits = () => {
   //const fruits = ['Apple', 'Mango', 'Banana', 'Orange', 'Pineapple'];
   const fruits = [
@@ -31,9 +33,12 @@ const Fruits = () => {
     <div>
       <ul>
         {fruits.map((fruit) => (
-          <li key={fruit.name}>
-            {fruit.name} - {fruit.color} - ${fruit.price}
-          </li>
+          <Fruit
+            key={fruit.name}
+            name={fruit.name}
+            price={fruit.price}
+            color={fruit.color}
+          />
         ))}
       </ul>
     </div>
