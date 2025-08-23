@@ -1,7 +1,7 @@
-const Fruit = ({ name, price, color }) => {
+const Fruit = ({ name, price, color, soldOut }) => {
   return (
       <>
-        {price> 10 ? <li>{name}-{price}$-{color}</li> :  ""}
+        {<li>{name}-{price}$-{color} {soldOut ? "soldout " : "availble"}</li>}
       </>
   );
 };

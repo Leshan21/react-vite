@@ -7,26 +7,31 @@ const Fruits = () => {
       name: "Apple",
       color: "Red",
       price: 10,
+      soldOut: false,
     },
     {
       name: "Mango",
       color: "Yellow",
       price: 15,
+      soldOut: false
     },
     {
       name: "Banana",
       color: "Yellow",
       price: 5,
+      soldOut: true
     },
     {
       name: "Orange",
       color: "Orange",
       price: 8,
+      soldOut: true
     },
     {
       name: "Pineapple",
       color: "Brown",
       price: 12,
+      soldOut: false
     },
   ];
   return (
@@ -38,6 +43,7 @@ const Fruits = () => {
             name={fruit.name}
             price={fruit.price}
             color={fruit.color}
+            soldOut={fruit.soldOut}
           />
         ))}
       </ul>
