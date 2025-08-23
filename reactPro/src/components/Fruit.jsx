@@ -1,8 +1,8 @@
 const Fruit = ({ name, price, color }) => {
   return (
-    <li>
-      {name}-{price}$-{color}
-    </li>
+      <>
+        {price> 10 ? <li>{name}-{price}$-{color}</li> :  ""}
+      </>
   );
 };
 
