@@ -2,16 +2,16 @@ import { useState } from "react";
 
 const Counter = () => {
   const [count, setCount] = useState(0);
-  function handleClick(){
+  function increment() {
     setCount(count + 1);
   }
-  function decrement(){
+  function decrement() {
     setCount(count - 1);
   }
   return (
     <>
       <h1>Count value : {count}</h1>
-      <button onClick={handleClick}>Increment</button>
+      <button onClick={increment}>Increment</button>
       <button onClick={decrement}>Decrement</button>
     </>
   );
