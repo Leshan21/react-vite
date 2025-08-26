@@ -1,5 +1,5 @@
 import { useState } from "react";
-import TodoItem from "./TodoItem.jsx";
+import TodoItem from "./TodoItem";
 
 const Todo = () => {
   const [todo, setTodo] = useState("");
