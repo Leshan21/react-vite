@@ -1,13 +1,11 @@
-import '../css/style.css';
+import styles from './inlinecomponents.module.css';
 
 const InlineComponents = () => {
-    
   return (
     <>
-       <h1 className='header'>inline components</h1>
-
+      <h1 className={styles.header}>inline components</h1>
     </>
-  )
-}
+  );
+};
 
-export default InlineComponents
+export default InlineComponents;
