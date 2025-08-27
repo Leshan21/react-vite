@@ -1,18 +1,28 @@
-import style from './todoitem.module.css'
+import style from "./todoitem.module.css";
 
-const Todoitem = ({item}) => {
+const Todoitem = ({ item, todos, setTodos }) => {
+  function handleDelete(item) {
+    console.log("item was deleted..!", item);
+    setTodos(todos.filter((todo) => todo !== item));
+  }
   return (
     <>
-        <div className={style.item}>
-          <div className={style.itemName}>{item}
+      <div className={style.item}>
+        <div className={style.itemName}>
+          {item}
           <span>
-            <button className={style.deleteButton}>X</button>
+            <button
+              onClick={() => handleDelete(item)}
+              className={style.deleteButton}
+            >
+              X
+            </button>
           </span>
-          </div>
-          <hr className={style.line} />
         </div>
+        <hr className={style.line} />
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default Todoitem
+export default Todoitem;
