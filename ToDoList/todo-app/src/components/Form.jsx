@@ -1,8 +1,8 @@
 import { useState } from "react";
+import style from "./form.module.css";
 
-const Form = ({todos, setTodos}) => {
+const Form = ({ todos, setTodos }) => {
   const [todo, setTodo] = useState("");
-
 
   function handleSubmit(e) {
     e.preventDefault(); // stop refresh after the submit
@@ -11,13 +11,19 @@ const Form = ({todos, setTodos}) => {
   }
   return (
     <>
-      <form action="" onSubmit={handleSubmit}>
-        <input
-          onChange={(e) => setTodo(e.target.value)}
-          value={todo}
-          type="text"
-        />
-        <button type="submit">Add</button>
+      <form className={style.todoform} action="" onSubmit={handleSubmit}>
+        <div className={style.inputContainer}>
+          <input
+            className={style.modernInput}
+            onChange={(e) => setTodo(e.target.value)}
+            value={todo}
+            type="text"
+            placeholder="Enter todo items.."
+          />
+          <button className={style.modernButton} type="submit">
+            Add
+          </button>
+        </div>
       </form>
     </>
   );
