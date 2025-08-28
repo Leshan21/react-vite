@@ -9,7 +9,7 @@ const Todoitem = ({ item, todos, setTodos }) => {
     <>
       <div className={style.item}>
         <div className={style.itemName}>
-          {item}
+          {item.name}
           <span>
             <button
               onClick={() => handleDelete(item)}
