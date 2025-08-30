@@ -7,13 +7,18 @@ const Todoitem = ({ item, todos, setTodos }) => {
   }
 
   function handleClick(name){
-    console.log("item text click", name)
+    const newArray = todos.map((todo)=>
+      todo.name === name ? {...todo, done: !todo.done} : todo
+    )
+    setTodos(newArray)
   }
+
+  const className = item.done ? style.completed : "";
   return (
     <>
       <div className={style.item}>
         <div className={style.itemName}>
-          <span onClick={()=>handleClick(item.name)}>{item.name}</span>
+          <span className={className} onClick={()=>handleClick(item.name)}>{item.name}</span>
           
           <span>
             <button
