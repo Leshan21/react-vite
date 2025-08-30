@@ -5,11 +5,16 @@ const Todoitem = ({ item, todos, setTodos }) => {
     console.log("item was deleted..!", item);
     setTodos(todos.filter((todo) => todo !== item));
   }
+
+  function handleClick(name){
+    console.log("item text click", name)
+  }
   return (
     <>
       <div className={style.item}>
         <div className={style.itemName}>
-          {item.name}
+          <span onClick={()=>handleClick(item.name)}>{item.name}</span>
+          
           <span>
             <button
               onClick={() => handleDelete(item)}
